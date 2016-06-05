@@ -1,5 +1,14 @@
 
 
+$(function () { // Same as document.addEventListener("DOMContentLoaded"...
+
+  // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
+   var targetElem = document.querySelector("#d1");
+  targetElem.innerHTML ="dudu";
+});
+
+
+(function (global) {
 function initialize() {
 var location = new google.maps.LatLng(44.841527,20.373976)
   var mapProp = {
@@ -12,6 +21,7 @@ var location = new google.maps.LatLng(44.841527,20.373976)
   addMarker(map, location,"MN Primat")
 }
 
+
 function addMarker (map, location, title){
 	var markerOptn = {
 		position: location,
@@ -20,11 +30,15 @@ function addMarker (map, location, title){
 	};
 
 	var marker = new google.maps.Marker(markerOptn);
-
 }
+
+var insertHtml = function (selector, html) {
+    var targetElem = document.querySelector(selector);
+    targetElem.innerHTML = html;
+    };
+
+
+
+
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
-
-
+})(window);
