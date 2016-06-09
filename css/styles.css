@@ -114,7 +114,7 @@ a.mb:link,a.mb:visited {
   font-size: 0.8em;
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   margin-top: 30px;
   /*margin-left: 5px;
   margin-right: 5px;*/
@@ -166,11 +166,11 @@ a.mb:link,a.mb:visited {
 }
 .box2 {
   /*background-color: #f7921e;*/
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 8%;
+  padding-right: 8%;
   padding-top: 25px; 
-  /*margin-bottom: 35px;
-  margin-top: 30px;*/
+  margin-bottom: 35px;
+  /*margin-top: 30px;*/
   /*height:300px;
   width: 100% ;*/
 
