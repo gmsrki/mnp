@@ -3,8 +3,8 @@
 $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
   // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
-   var targetElem = document.querySelector("#d1");
-  targetElem.innerHTML ="dudu";
+  // var targetElem = document.querySelector("#d1");
+  //targetElem.innerHTML ="dudu";
 });
 
 
@@ -18,6 +18,7 @@ var location = new google.maps.LatLng(44.841527,20.373976)
     mapTypeId:google.maps.MapTypeId.ROADMAP
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+ //console.log( map.propValue('padding'));
   addMarker(map, location,"MN Primat")
 }
 
@@ -37,6 +38,12 @@ var insertHtml = function (selector, html) {
     targetElem.innerHTML = html;
     };
 
+var insertProperty = function (string, propName, propValue) {
+  var propToReplace = "{{" + propName + "}}";
+  string = string
+    .replace(new RegExp(propToReplace, "g"), propValue);
+  return string;
+}
 
 
 
